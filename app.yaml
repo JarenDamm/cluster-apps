@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cluster-apps
+  namespace: argocd
+spec:
+  project: default
+  source:
+    chart: argomanage
+    repoURL: https://raw.githubusercontent.com/JarenDamm/charts/main
+    targetRevision: '>=0.0.0'
+    helm:
+      releaseName: argomanage
+      version: v3
+      valueFiles:
+        - https://raw.githubusercontent.com/JarenDamm/cluster-apps/main/values.yaml     
+  destination:
+    server: "https://kubernetes.default.svc"    
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true     
