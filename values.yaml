@@ -2,5 +2,5 @@ argocd:
   enabled: true
 reflector:
   enabled: true
-kube-dashboard:
+kubedashboard:
   enabled: true
