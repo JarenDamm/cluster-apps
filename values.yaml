@@ -3,7 +3,7 @@ argocd:
 reflector:
   enabled: true
 kubedashboard:
-  enabled: true
+  enabled: false
 linkerd:
   enabled: true
 linkerdViz:
