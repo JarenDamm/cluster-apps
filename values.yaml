@@ -4,7 +4,5 @@ reflector:
   enabled: true
 kubedashboard:
   enabled: false
-linkerd:
-  enabled: true
-linkerdViz:
+kuma:
   enabled: true
