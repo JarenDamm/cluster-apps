@@ -4,3 +4,7 @@ reflector:
   enabled: true
 kubedashboard:
   enabled: true
+linkerd:
+  enabled: true
+linkerdViz:
+  enabled: true
