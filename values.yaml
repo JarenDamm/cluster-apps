@@ -4,5 +4,3 @@ reflector:
   enabled: true
 kubedashboard:
   enabled: false
-kuma:
-  enabled: true
